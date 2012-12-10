@@ -1,0 +1,22 @@
+.rs-container {
+    position: absolute;
+    overflow: hidden;
+}
+
+.rs-container * {
+    border-spacing: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.rs-table {
+    position: relative;
+}
+
+.rs-title-cell {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #73A9CB;
+    color: white;
+    font-family: arial, helvetica, sans-serif;
+}

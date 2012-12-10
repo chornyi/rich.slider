@@ -1,0 +1,10 @@
+{
+    "name": "rich",
+    "version": "0.0.1",
+    "dependencies": {
+        "connect": "*"
+    },
+    "scripts": {
+        "start": "node server.js"
+    }
+}
