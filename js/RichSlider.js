@@ -7,9 +7,10 @@ var RichSlider = new Class({
         imageUrl: null,
         parentId: null,
         text: null,
-        imageWidth: null,
-        imageHeight: null,
-        textHeight: null
+        imageWidth: 324,
+        imageHeight: 220,
+        textHeight: 40,
+        slideDuration: 250
     },
 
     image: null,
@@ -17,8 +18,9 @@ var RichSlider = new Class({
     initialize: function(options){
         this.setOptions(options);
 
-        var containerElement = new Element('div', {
+        var containerElement = new Element('a', {
             'class': 'rs-container',
+            'href': this.options.targetUrl,
             'styles': {
                 width: this.options.imageWidth + 'px',
                 height: this.options.imageHeight + 'px'
@@ -79,7 +81,7 @@ var RichSlider = new Class({
 
     addEvents: function(element) {
         var slide = new Fx.Tween(element, {
-            duration: 250,
+            duration: this.options.slideDuration,
             transition: Fx.Transitions.expo,
             property: 'top'
         });
